@@ -1,5 +1,5 @@
 <?php
-    // controllers/auth_controller.php
+    // 
 
     session_start();
     require_once('../models/user.php');
