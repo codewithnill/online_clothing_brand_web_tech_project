@@ -1,0 +1,121 @@
+Task 1 (23-53718-3) : Auth (Login/Register/Remember Me/Logout), Profile Management (update profile, change password, profile picture), Admin: Product CRUD, Delete Customers, Order List (confirm/reject), View All Purchase History.
+
+Task 2 (23-54618-3) : Home Page (gender/category navigation, featured products), Customer: Search & Filtering (AJAX), Product Details, Add to Cart, Cart Management.
+
+Task 3 (23-55188-3) : Basic Browsing (category viewing), Customer: Checkout, Invoice, Payment Method Selection, Order Finalization, Purchase History in Profile.
+
+
+
+
+
+================================================================================
+TASK 1 - Student: 23-53718-3
+================================================================================
+
+Controllers:
+    - auth_controller.php
+    - profile_controller.php
+    - admin_controller.php
+    - product_controller.php
+    - customer_controller.php
+    - order_controller.php (admin part: confirm/reject, view all purchase history)
+
+Models:
+    - user.php
+    - product.php
+    - order.php
+
+Views:
+    - auth/login.php
+    - auth/register.php
+    - profile/view.php
+    - profile/edit.php
+    - profile/change_password.php
+    - admin/dashboard.php
+    - admin/products/list.php
+    - admin/products/create.php
+    - admin/products/edit.php
+    - admin/products/delete.php
+    - admin/customers/list.php
+    - admin/orders/list.php
+    - admin/purchase_history/all.php
+
+Public/JS:
+    - auth.js
+    - admin.js
+
+Features:
+    - User Authentication (Login, Register, Logout, Remember Me)
+    - Profile Management (view, edit, change password, profile picture)
+    - Admin Dashboard (summary counts)
+    - Product CRUD (create, read, update, delete with image upload)
+    - Delete Customers
+    - Order List (confirm/reject orders via AJAX)
+    - View All Purchase History
+
+================================================================================
+TASK 2 - Student: 23-54618-3
+================================================================================
+
+Controllers:
+    - home_controller.php
+    - search_controller.php
+    - cart_controller.php
+    - product_detail_controller.php
+
+Models:
+    - category.php
+    - cart.php
+
+Views:
+    - home/index.php (with gender/category navigation, featured products, search box)
+    - products/details.php
+    - products/search_results.php
+    - products/filter.php
+    - cart/index.php
+    - cart/empty.php
+
+Public/JS:
+    - search.js
+    - cart.js
+
+Features:
+    - Home Page (gender/category navigation, featured products)
+    - Search & Filtering (AJAX - by product name, category, gender)
+    - Product Details Page (images, description, size chart, price, stock)
+    - Add to Cart (AJAX)
+    - Cart Management (view, update quantity, remove items, AJAX)
+
+================================================================================
+TASK 3 - Student: 23-55188-3
+================================================================================
+
+Controllers:
+    - checkout_controller.php
+    - order_controller.php (customer part: purchase history)
+
+Models:
+    - order_item.php
+    - payment.php
+
+Views:
+    - home/category.php (basic browsing)
+    - checkout/invoice.php
+    - checkout/payment.php
+    - checkout/confirmation.php
+    - checkout/success.php
+    - orders/history.php
+    - errors/403.php
+    - errors/404.php
+    - errors/500.php
+
+Public/JS:
+    - checkout.js
+
+Features:
+    - Basic Browsing (view products by category)
+    - Checkout Process
+    - Invoice Summary
+    - Payment Method Selection
+    - Order Finalization
+    - Purchase History in Customer Profile
