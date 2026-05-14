@@ -1,0 +1,57 @@
+Table: users
+    - id
+    - name
+    - email
+    - password_hash
+    - role (admin/customer)
+    - profile_picture
+    - address
+    - phone
+    - created_at
+
+Table: categories
+    - id
+    - name
+    - parent_id (for hierarchical: Gender -> Clothing type)
+    - created_at
+
+Table: products
+    - id
+    - name
+    - description
+    - size_chart (text or JSON)
+    - price
+    - category_id
+    - image_path
+    - stock
+    - gender (Men/Women)
+    - created_at
+
+Table: cart
+    - id
+    - user_id
+    - product_id
+    - quantity
+    - added_at
+
+Table: orders
+    - id
+    - user_id
+    - total_amount
+    - status (pending/confirmed/rejected)
+    - order_date
+
+Table: order_items
+    - id
+    - order_id
+    - product_id
+    - quantity
+    - unit_price
+
+Table: payments
+    - id
+    - order_id
+    - amount
+    - payment_method
+    - transaction_id
+    - payment_date
