@@ -1,7 +1,8 @@
 online_clothing_brand/
 │
 ├── config/
-│   └── database.php
+│   ├── database.php
+|   └── db_config.php
 │
 ├── controllers/
 │   │
@@ -108,6 +109,14 @@ online_clothing_brand/
 │   ├── validation_helper.php
 │   ├── security_helper.php
 │   └── file_upload_helper.php
+│
+├── .txt files/
+│   ├── database_schema.txt
+│   ├── db_foreign_key_relationships.txt
+│   ├── db_insert_queries.txt
+│   ├── db_table_creating_queries.txt
+│   ├── mvc_file_structure.txt
+│   └── task_breakdown.txt
 │
 ├── .htaccess
 └── README.md
