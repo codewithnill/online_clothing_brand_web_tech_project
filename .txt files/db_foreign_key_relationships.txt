@@ -1,0 +1,16 @@
+users
+  ├── cart (cart_user_id)
+  ├── orders (order_user_id)
+  └── payments (via orders)
+
+categories
+  └── categories (parent_category_id - self reference)
+  └── products (product_category_id)
+
+products
+  ├── cart (cart_product_id)
+  └── order_items (order_item_product_id)
+
+orders
+  ├── order_items (order_item_order_id)
+  └── payments (payment_order_id)
