@@ -123,8 +123,12 @@
         // home fallback
         case 'home':
         default:
+            echo "<center>";
+            echo "<marquee>";
             echo "<h1>Welcome to Online Clothing Brand</h1>";
-            echo "<p><a href='index.php?action=login'>Login</a> | <a href='index.php?action=register'>Register</a></p>";
+            echo "</marquee>";
+            echo "<p><a href='index.php?action=login'>Sign in</a> | <a href='index.php?action=register'>Sign up</a></p>";
+            echo "</center";
             break;
     }
 ?>
