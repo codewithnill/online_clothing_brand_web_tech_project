@@ -1,7 +1,7 @@
 <?php
     // 
 
-    session_start();
+    //session_start();
     require_once('../models/user.php');
     require_once('../utils/auth_helper.php');
 
