@@ -1,5 +1,9 @@
 <?php
     //session_start();
+    if(isset($_SESSION['register_success'])) {
+        echo "<center><p>" . $_SESSION['register_success'] . "</p></center>";
+        unset($_SESSION['register_success']);
+    }   
 ?>
 
 <!DOCTYPE html>
