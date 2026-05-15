@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    require_once('../../models/user.php');
-    require_once('../../utils/auth_helper.php');
+    // session_start();
+    require_once('../models/user.php');
+    require_once('../utils/auth_helper.php');
 
     require_login();
 
@@ -28,7 +28,7 @@
             }
         ?>
 
-        <form method="POST" action="../../public/index.php?action=update_profile">
+        <form method="POST" action="../public/index.php?action=update_profile">
             <label>Name:</label>
             <input type="text" name="name" value="<?php echo $user['user_name']; ?>" required> <br><br>
 
@@ -42,7 +42,7 @@
         </form>
 
         <br>
-        <a href="../../public/index.php?action=profile">Back to Profile</a>
+        <a href="index.php?action=profile">Back to Profile</a>
     </div>
 </body>
 </html>

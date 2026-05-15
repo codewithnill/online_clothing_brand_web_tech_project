@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    require_once('../../models/user.php');
-    require_once('../../utils/auth_helper.php');
+    // session_start();
+    require_once('../models/user.php');
+    require_once('../utils/auth_helper.php');
 
     require_login();
 
@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - Online Clothing Brand</title>
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -39,9 +39,9 @@
         <p><strong>Phone:</strong> <?php echo $user['user_phone']; ?></p>
 
         <br>
-        <a href="../../public/index.php?action=edit_profile">Edit Profile</a> |
-        <a href="../../public/index.php?action=change_password">Change Password</a> |
-        <a href="../../public/index.php?action=home">Back to Home</a>
+        <a href="../public/index.php?action=edit_profile">Edit Profile</a> |
+        <a href="../public/index.php?action=change_password">Change Password</a> |
+        <a href="../public/index.php?action=home">Back to Home</a>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    require_once('../../utils/auth_helper.php');
+    // session_start();
+    require_once('../utils/auth_helper.php');
 
     require_login();
 ?>
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password - Online Clothing Brand</title>
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -24,7 +24,7 @@
             }
         ?>
 
-        <form method="POST" action="../../public/index.php?action=update_password">
+        <form method="POST" action="../public/index.php?action=update_password">
             <label>Current Password:</label>
             <input type="password" name="current_password" required> <br><br>
 
@@ -38,7 +38,7 @@
         </form>
 
         <br>
-        <a href="../../public/index.php?action=profile">Back to Profile</a>
+        <a href="index.php?action=profile">Back to Profile</a>
     </div>
 </body>
 </html>
