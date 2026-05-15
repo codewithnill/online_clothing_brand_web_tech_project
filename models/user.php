@@ -50,8 +50,11 @@
     function get_user_by_id($user_id) {
         $con = get_connection();
         
-        $sql = "SELECT user_id, user_name, user_email, user_role, user_profile_picture, user_address, user_phone, user_created_at 
-                FROM users WHERE user_id = '$user_id'";
+        // $sql = "SELECT user_id, user_name, user_email, user_role, user_profile_picture, user_address, user_phone, user_created_at 
+        //         FROM users WHERE user_id = '$user_id'";
+
+        $sql = "SELECT user_id, user_name, user_email, user_password_hash, user_role, user_profile_picture, user_address, user_phone, user_created_at 
+        FROM users WHERE user_id = '$user_id'";
         
         $result = mysqli_query($con, $sql);
         
