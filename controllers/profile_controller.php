@@ -56,6 +56,30 @@
             $confirm_password = $_POST['confirm_password'];
             
             $user = get_user_by_id($user_id);
+
+
+
+
+
+            // for debug
+            // echo "Stored hash: " . $user['user_password_hash'] . "<br>";
+            // echo "Entered password: " . $current_password . "<br>";
+            // if(password_verify($current_password, $user['user_password_hash'])) {
+            //     echo "Password matches!";
+            // } else {
+            //     echo "Password does NOT match!";
+            // }
+            // exit();
+
+
+
+
+
+
+
+
+
+
             
             if(!password_verify($current_password, $user['user_password_hash'])) {
                 $_SESSION['password_error'] = "Current password is incorrect!";
