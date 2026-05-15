@@ -67,7 +67,7 @@
             if(empty($name)) $errors[] = "Name is required";
             if(empty($email)) $errors[] = "Email is required";
             if(empty($password)) $errors[] = "Password is required";
-            if(strlen($password) < 8) $errors[] = "Password must be at least 8 characters";
+            if(strlen($password) < 4) $errors[] = "Password must be at least 4 characters";
             if(empty($address)) $errors[] = "Address is required";
             if(empty($phone)) $errors[] = "Phone is required";
             
