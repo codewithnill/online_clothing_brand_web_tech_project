@@ -36,7 +36,7 @@
                 <input type="submit" value="Login">
             </form>
             
-            <p>Don't have an account? <a href="../../public/index.php?action=register">Sign up now.</a></p>
+            <p>Don't have an account? <a href="index.php?action=register">Sign up now.</a></p>
         </center>
     </div>
 </body>

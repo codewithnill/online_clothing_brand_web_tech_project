@@ -54,7 +54,7 @@
                 <input type="submit" value="Register">
             </form>
 
-            <p>Already have an account? <a href="../../public/index.php?action=login">Login here</a></p>  
+            <p>Already have an account? <a href="index.php?action=login">Login here</a></p>  
         </center>
     </div>
 </body>
