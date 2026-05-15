@@ -1,5 +1,10 @@
 <?php
     //session_start();
+    if(isset($_SESSION['login_error'])) {
+        echo "<center><p style='color:red'>" . $_SESSION['login_error'] . "</p></center>";
+        unset($_SESSION['login_error']);
+    }
+
     if(isset($_SESSION['register_success'])) {
         echo "<center><p>" . $_SESSION['register_success'] . "</p></center>";
         unset($_SESSION['register_success']);
