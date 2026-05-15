@@ -22,7 +22,7 @@
                 }
             ?>
             
-            <form method="POST" action="../../public/index.php?action=login_submit">
+            <form method="POST" action="index.php?action=login_submit">
                 <label>Email:</label>
                 <input type="email" name="email" required> <br><br>
                 

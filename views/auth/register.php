@@ -29,7 +29,7 @@
                 }
             ?>
 
-            <form method="POST" action="../../public/index.php?action=register_submit">
+            <form method="POST" action="index.php?action=register_submit">
                 <label>Name:</label>
                 <input type="text" name="name" required> <br><br>
 
