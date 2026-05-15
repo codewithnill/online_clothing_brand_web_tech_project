@@ -1,5 +1,18 @@
 <?php
     //session_start();
+    if(isset($_SESSION['register_error'])) {
+        echo "<center><p style='color:red'>" . $_SESSION['register_error'] . "</p></center>";
+        unset($_SESSION['register_error']);
+    }
+
+    // if(isset($_SESSION['register_errors'])) {
+    //     echo "<center>";
+    //     foreach($_SESSION['register_errors'] as $err) {
+    //         echo "<p style='color:red'>" . $err . "</p>";
+    //     }
+    //     echo "</center>";
+    //     unset($_SESSION['register_errors']);
+    // }
 ?>
 
 <!DOCTYPE html>
