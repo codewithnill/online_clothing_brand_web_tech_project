@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 ?>
 
 <!DOCTYPE html>
@@ -12,30 +12,32 @@
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
-        
-        <?php
-            if(isset($_SESSION['login_error'])) {
-                echo "<p>" . $_SESSION['login_error'] . "</p>";
-                unset($_SESSION['login_error']);
-            }
-        ?>
-        
-        <form method="POST" action="../../public/index.php?action=login_submit">
-            <label>Email:</label>
-            <input type="email" name="email" required> <br><br>
+        <center>
+            <h2>Login</h2>
             
-            <label>Password:</label>
-            <input type="password" name="password" required> <br><br>
+            <?php
+                if(isset($_SESSION['login_error'])) {
+                    echo "<p>" . $_SESSION['login_error'] . "</p>";
+                    unset($_SESSION['login_error']);
+                }
+            ?>
             
-            <label>
-                <input type="checkbox" name="remember"> Remember Me
-            </label> <br><br>
+            <form method="POST" action="../../public/index.php?action=login_submit">
+                <label>Email:</label>
+                <input type="email" name="email" required> <br><br>
+                
+                <label>Password:</label>
+                <input type="password" name="password" required> <br><br>
+                
+                <label>
+                    <input type="checkbox" name="remember"> Remember Me
+                </label> <br><br>
+                
+                <input type="submit" value="Login">
+            </form>
             
-            <input type="submit" value="Login">
-        </form>
-        
-        <p>Don't have an account? <a href="../../public/index.php?action=register">Sign up now.</a></p>
+            <p>Don't have an account? <a href="../../public/index.php?action=register">Sign up now.</a></p>
+        </center>
     </div>
 </body>
 </html>

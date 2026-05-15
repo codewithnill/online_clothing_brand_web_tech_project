@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 ?>
 
 <!DOCTYPE html>
@@ -12,48 +12,50 @@
 </head>
 <body>
     <div class="container">
-        <h2>Register</h2>
+        <center>
+            <h2>Register</h2>
 
-        <?php
-            if(isset($_SESSION['register_error'])) {
-                echo "<p>" . $_SESSION['register_error'] . "</p>";
-                unset($_SESSION['register_error']);
-            }
-
-            if(isset($_SESSION['register_errors'])) {
-                foreach($_SESSION['register_errors'] as $err) {
-                    echo "<p>" . $err . "</p>";
+            <?php
+                if(isset($_SESSION['register_error'])) {
+                    echo "<p>" . $_SESSION['register_error'] . "</p>";
+                    unset($_SESSION['register_error']);
                 }
-                unset($_SESSION['register_errors']);
-            }
-        ?>
 
-        <form method="POST" action="../../public/index.php?action=register_submit">
-            <label>Name:</label>
-            <input type="text" name="name" required> <br><br>
+                if(isset($_SESSION['register_errors'])) {
+                    foreach($_SESSION['register_errors'] as $err) {
+                        echo "<p>" . $err . "</p>";
+                    }
+                    unset($_SESSION['register_errors']);
+                }
+            ?>
 
-            <label>Email:</label>
-            <input type="email" name="email" required> <br><br>
+            <form method="POST" action="../../public/index.php?action=register_submit">
+                <label>Name:</label>
+                <input type="text" name="name" required> <br><br>
 
-            <label>Password:</label>
-            <input type="password" name="password" required> <br><br>
+                <label>Email:</label>
+                <input type="email" name="email" required> <br><br>
 
-            <label>Role:</label>
-            <select name="role">
-                <option value="customer">Customer</option>
-                <option value="admin">Admin</option>
-            </select> <br><br>
+                <label>Password:</label>
+                <input type="password" name="password" required> <br><br>
 
-            <label>Address:</label>
-            <textarea name="address" required></textarea> <br><br>
+                <label>Role:</label>
+                <select name="role">
+                    <option value="customer">Customer</option>
+                    <option value="admin">Admin</option>
+                </select> <br><br>
 
-            <label>Phone:</label>
-            <input type="text" name="phone" required> <br><br>
+                <label>Address:</label>
+                <textarea name="address" required></textarea> <br><br>
 
-            <input type="submit" value="Register">
-        </form>
+                <label>Phone:</label>
+                <input type="text" name="phone" required> <br><br>
 
-        <p>Already have an account? <a href="../../public/index.php?action=login">Login here</a></p>
+                <input type="submit" value="Register">
+            </form>
+
+            <p>Already have an account? <a href="../../public/index.php?action=login">Login here</a></p>  
+        </center>
     </div>
 </body>
 </html>
