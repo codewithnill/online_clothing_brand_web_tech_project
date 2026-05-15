@@ -19,7 +19,8 @@
 
         <?php
             if(isset($_SESSION['password_error'])) {
-                echo "<p>" . $_SESSION['password_error'] . "</p>";
+                // echo "<p>" . $_SESSION['password_error'] . "</p>";
+                echo "<p style='color:red'>" . $_SESSION['password_error'] . "</p>";
                 unset($_SESSION['password_error']);
             }
         ?>
