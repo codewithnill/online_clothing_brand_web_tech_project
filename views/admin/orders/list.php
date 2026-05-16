@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    require_once('../../../utils/auth_helper.php');
+    // session_start();
+    require_once('../utils/auth_helper.php');
     require_admin();
 ?>
 
@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order List - Admin</title>
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -21,12 +21,12 @@
                 if($_GET['msg'] == 'success') {
                     echo "<p>Order status updated successfully!</p>";
                 } elseif($_GET['msg'] == 'error') {
-                    echo "<p>Failed to update order status!</p>";
+                    echo "<p style='color:red'>Failed to update order status!</p>";
                 }
             }
         ?>
 
-        <a href="../../../public/index.php?action=admin_dashboard">Back to Dashboard</a>
+        <a href="../public/index.php?action=admin_dashboard">Back to dashboard</a>
 
         <br><br>
 
@@ -48,7 +48,7 @@
                 <td><?php echo $order['order_date']; ?></td>
                 <td>
                     <?php if($order['order_status'] == 'pending') { ?>
-                        <form method="POST" action="../../../public/index.php?action=update_order_status" style="display:inline;">
+                        <form method="POST" action="../public/index.php?action=update_order_status" style="display:inline;">
                             <input type="hidden" name="order_id" value="<?php echo $order['order_id']; ?>">
                             <button type="submit" name="status" value="confirmed">Confirm</button>
                             <button type="submit" name="status" value="rejected">Reject</button>
