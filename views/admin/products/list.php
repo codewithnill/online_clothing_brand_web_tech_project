@@ -29,8 +29,7 @@
             }
             ?>
 
-            <a href="../public/index.php?action=create_product">Add new product</a> |
-            <a href="../public/index.php?action=admin_dashboard">Back to dashboard</a>
+            
 
             <br><br>
 
@@ -57,6 +56,10 @@
                 </tr>
                 <?php } ?>
             </table>
+
+            <br>
+            <a href="../public/index.php?action=create_product">Add new product</a> |
+            <a href="../public/index.php?action=admin_dashboard">Back to dashboard</a>
         </center>
         
     </div>

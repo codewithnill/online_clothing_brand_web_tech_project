@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    require_once('../../../utils/auth_helper.php');
+    // session_start();
+    require_once('../utils/auth_helper.php');
     require_admin();
 ?>
 
@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product - Admin</title>
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -18,12 +18,12 @@
 
         <?php
         if(isset($_SESSION['product_error'])) {
-            echo "<p>" . $_SESSION['product_error'] . "</p>";
+             echo "<p style='color:red'>" . $_SESSION['product_error'] . "</p>";
             unset($_SESSION['product_error']);
         }
         ?>
 
-        <form method="POST" action="../../../public/index.php?action=edit_product_submit" enctype="multipart/form-data">
+        <form method="POST" action="../public/index.php?action=edit_product_submit" enctype="multipart/form-data">
             <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
 
             <label>Product Name:</label>
@@ -61,7 +61,7 @@
         </form>
 
         <br>
-        <a href="../../../public/index.php?action=product_list">Back to Product List</a>
+        <a href="../public/index.php?action=product_list">Back to product list</a>
     </div>
 </body>
 </html>
