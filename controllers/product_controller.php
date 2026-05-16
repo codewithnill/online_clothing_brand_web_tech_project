@@ -94,7 +94,7 @@
 
     function delete_product() {
         $product_id = $_GET['id'];
-        $result = delete_product($product_id);
+        $result = delete_product_by_id($product_id);
         
         if($result) {
             $_SESSION['product_success'] = "Product deleted successfully!";
