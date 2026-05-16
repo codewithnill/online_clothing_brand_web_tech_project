@@ -19,29 +19,31 @@
 </head>
 <body>
     <div class="container">
-        <h2>My Profile</h2>
+        <center>
+            <h2>My Profile</h2>
 
-        <?php
-        if(isset($_SESSION['profile_success'])) {
-            echo "<p>" . $_SESSION['profile_success'] . "</p>";
-            unset($_SESSION['profile_success']);
-        }
+            <?php
+            if(isset($_SESSION['profile_success'])) {
+                echo "<p>" . $_SESSION['profile_success'] . "</p>";
+                unset($_SESSION['profile_success']);
+            }
 
-        if(isset($_SESSION['password_success'])) {
-            echo "<p>" . $_SESSION['password_success'] . "</p>";
-            unset($_SESSION['password_success']);
-        }
-        ?>
+            if(isset($_SESSION['password_success'])) {
+                echo "<p>" . $_SESSION['password_success'] . "</p>";
+                unset($_SESSION['password_success']);
+            }
+            ?>
 
-        <p><strong>Name:</strong> <?php echo $user['user_name']; ?></p>
-        <p><strong>Email:</strong> <?php echo $user['user_email']; ?></p>
-        <p><strong>Address:</strong> <?php echo $user['user_address']; ?></p>
-        <p><strong>Phone:</strong> <?php echo $user['user_phone']; ?></p>
+            <p><strong>Name:</strong> <?php echo $user['user_name']; ?></p>
+            <p><strong>Email:</strong> <?php echo $user['user_email']; ?></p>
+            <p><strong>Address:</strong> <?php echo $user['user_address']; ?></p>
+            <p><strong>Phone:</strong> <?php echo $user['user_phone']; ?></p>
 
-        <br>
-        <a href="../public/index.php?action=edit_profile">Edit Profile</a> |
-        <a href="../public/index.php?action=change_password">Change Password</a> |
-        <a href="../public/index.php?action=home">Back to Home</a>
+            <br>
+            <a href="../public/index.php?action=edit_profile">Edit Profile</a> |
+            <a href="../public/index.php?action=change_password">Change Password</a> |
+            <a href="../public/index.php?action=home">Back to Home</a>
+        </center>
     </div>
 </body>
 </html>

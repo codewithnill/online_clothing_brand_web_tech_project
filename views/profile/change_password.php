@@ -15,31 +15,34 @@
 </head>
 <body>
     <div class="container">
-        <h2>Change Password</h2>
+        <center>
+        
+            <h2>Change Password</h2>
 
-        <?php
-            if(isset($_SESSION['password_error'])) {
-                // echo "<p>" . $_SESSION['password_error'] . "</p>";
-                echo "<p style='color:red'>" . $_SESSION['password_error'] . "</p>";
-                unset($_SESSION['password_error']);
-            }
-        ?>
+            <?php
+                if(isset($_SESSION['password_error'])) {
+                    // echo "<p>" . $_SESSION['password_error'] . "</p>";
+                    echo "<p style='color:red'>" . $_SESSION['password_error'] . "</p>";
+                    unset($_SESSION['password_error']);
+                }
+            ?>
 
-        <form method="POST" action="../public/index.php?action=update_password">
-            <label>Current Password:</label>
-            <input type="password" name="current_password" required> <br><br>
+            <form method="POST" action="../public/index.php?action=update_password">
+                <label>Current Password:</label>
+                <input type="password" name="current_password" required> <br><br>
 
-            <label>New Password:</label>
-            <input type="password" name="new_password" required> <br><br>
+                <label>New Password:</label>
+                <input type="password" name="new_password" required> <br><br>
 
-            <label>Confirm New Password:</label>
-            <input type="password" name="confirm_password" required> <br><br>
+                <label>Confirm New Password:</label>
+                <input type="password" name="confirm_password" required> <br><br>
 
-            <input type="submit" value="Change Password">
-        </form>
+                <input type="submit" value="Change Password">
+            </form>
 
-        <br>
-        <a href="index.php?action=profile">Back to Profile</a>
+            <br>
+            <a href="index.php?action=profile">Back to Profile</a>
+        </center>
     </div>
 </body>
 </html>
