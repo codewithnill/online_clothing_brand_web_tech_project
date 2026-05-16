@@ -71,7 +71,7 @@
         return $result;
     }
 
-    function delete_product($product_id) {
+    function delete_product_by_id($product_id) {
         $con = get_connection();
         
         $sql = "DELETE FROM products WHERE product_id = '$product_id'";
