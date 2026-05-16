@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
     require_once('../models/product.php');
     require_once('../utils/auth_helper.php');
 
