@@ -16,7 +16,7 @@
             $order_id = $_POST['order_id'];
             $status = $_POST['status'];
             
-            $result = update_order_status($order_id, $status);
+            $result = update_order_status_by_id($order_id, $status);
             
             if($result) {
                 echo "success";
