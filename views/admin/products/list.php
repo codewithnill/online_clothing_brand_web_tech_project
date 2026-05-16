@@ -29,8 +29,8 @@
             }
             ?>
 
-            <a href="../public/index.php?action=create_product">Add New Product</a> |
-            <a href="../public/index.php?action=admin_dashboard">Back to Dashboard</a>
+            <a href="../public/index.php?action=create_product">Add new product</a> |
+            <a href="../public/index.php?action=admin_dashboard">Back to dashboard</a>
 
             <br><br>
 
