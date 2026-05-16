@@ -35,7 +35,7 @@
         return $orders;
     }
 
-    function update_order_status($order_id, $status) {
+    function update_order_status_by_id($order_id, $status) {
         $con = get_connection();
         $sql = "UPDATE orders SET order_status = '$status' WHERE order_id = '$order_id'";
         $result = mysqli_query($con, $sql);
