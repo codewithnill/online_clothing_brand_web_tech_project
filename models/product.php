@@ -24,6 +24,51 @@
         return $products;
     }
 
+    function get_featured_products() {
+        $con = get_connection();
+        $sql = "SELECT * FROM products ORDER BY product_id DESC LIMIT 6";
+        $result = mysqli_query($con, $sql);
+        
+        $products = [];
+        while($row = mysqli_fetch_assoc($result)) {
+            $products[] = $row;
+        }
+        
+        mysqli_close($con);
+        return $products;
+    }
+
+    function search_products($keyword, $category_id, $gender) {
+        $con = get_connection();
+        
+        $sql = "SELECT products.*, categories.category_name 
+                FROM products 
+                LEFT JOIN categories ON products.product_category_id = categories.category_id 
+                WHERE 1";
+        
+        if(!empty($keyword)) {
+            $sql .= " AND products.product_name LIKE '%$keyword%'";
+        }
+        
+        if(!empty($category_id)) {
+            $sql .= " AND products.product_category_id = '$category_id'";
+        }
+        
+        if(!empty($gender)) {
+            $sql .= " AND products.product_gender = '$gender'";
+        }
+        
+        $result = mysqli_query($con, $sql);
+        
+        $products = [];
+        while($row = mysqli_fetch_assoc($result)) {
+            $products[] = $row;
+        }
+        
+        mysqli_close($con);
+        return $products;
+    }
+
     function get_product_by_id($product_id) {
         $con = get_connection();
         $sql = "SELECT * FROM products WHERE product_id = '$product_id'";
@@ -79,5 +124,20 @@
         
         mysqli_close($con);
         return $result;
+    }
+
+    // Returns all products belonging to a specific category (Task-3)
+    function get_products_by_category($category_id) {
+        $con = get_connection();
+        $sql = "SELECT * FROM products WHERE product_category_id = '$category_id' ORDER BY product_created_at DESC";
+        $result = mysqli_query($con, $sql);
+ 
+        $products = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $products[] = $row;
+        }
+ 
+        mysqli_close($con);
+        return $products;
     }
 ?>
