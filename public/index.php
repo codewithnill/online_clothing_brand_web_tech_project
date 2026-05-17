@@ -142,6 +142,16 @@
             place_order();
             break;
         
+        case 'checkout_confirmation':
+            require_once('../controllers/checkout_controller.php');
+            show_confirmation();
+            break;
+        
+        case 'confirm_order':
+            require_once('../controllers/checkout_controller.php');
+            confirm_order();
+            break;
+        
         case 'order_success':
             require_once('../controllers/checkout_controller.php');
             show_order_success();
