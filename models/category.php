@@ -15,6 +15,20 @@
         return $categories;
     }
 
+    function get_parent_categories() {
+        $con = get_connection();
+        $sql = "SELECT * FROM categories WHERE parent_category_id IS NULL";
+        $result = mysqli_query($con, $sql);
+        
+        $categories = [];
+        while($row = mysqli_fetch_assoc($result)) {
+            $categories[] = $row;
+        }
+        
+        mysqli_close($con);
+        return $categories;
+    }
+
     function get_category_by_id($category_id) {
         $con = get_connection();
         $sql = "SELECT * FROM categories WHERE category_id = '$category_id'";
