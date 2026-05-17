@@ -42,6 +42,7 @@
             <br>
             <a href="../public/index.php?action=edit_profile">Edit Profile</a> |
             <a href="../public/index.php?action=change_password">Change Password</a> |
+            <a href="../public/index.php?action=my_orders">My Orders</a> |
             <a href="../public/index.php?action=home">Back to Home</a>
         </center>
     </div>
