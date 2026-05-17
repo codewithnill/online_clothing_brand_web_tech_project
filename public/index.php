@@ -119,6 +119,33 @@
             require_once('../controllers/order_controller.php');
             purchase_history();
             break;
+
+         // checkout routes (Task 3)
+        case 'checkout_invoice':
+            require_once('../controllers/checkout_controller.php');
+            show_invoice();
+            break;
+        
+        case 'checkout_payment':
+            require_once('../controllers/checkout_controller.php');
+            show_payment();
+            break;
+        
+        case 'place_order':
+            require_once('../controllers/checkout_controller.php');
+            place_order();
+            break;
+        
+        case 'order_success':
+            require_once('../controllers/checkout_controller.php');
+            show_order_success();
+            break;
+        
+        // customer purchase history (Task 3)
+        case 'my_orders':
+            require_once('../controllers/order_controller.php');
+            my_orders();
+            break;
         
         // home fallback
         case 'home':
