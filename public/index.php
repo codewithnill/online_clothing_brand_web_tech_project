@@ -119,6 +119,49 @@
             require_once('../controllers/order_controller.php');
             purchase_history();
             break;
+
+        // category browsing (Task 3)
+        case 'category':
+            require_once('../controllers/home_controller.php');
+            show_category();
+            break;
+            
+         // checkout routes (Task 3)
+        case 'checkout_invoice':
+            require_once('../controllers/checkout_controller.php');
+            show_invoice();
+            break;
+        
+        case 'checkout_payment':
+            require_once('../controllers/checkout_controller.php');
+            show_payment();
+            break;
+        
+        case 'place_order':
+            require_once('../controllers/checkout_controller.php');
+            place_order();
+            break;
+        
+        case 'checkout_confirmation':
+            require_once('../controllers/checkout_controller.php');
+            show_confirmation();
+            break;
+        
+        case 'confirm_order':
+            require_once('../controllers/checkout_controller.php');
+            confirm_order();
+            break;
+        
+        case 'order_success':
+            require_once('../controllers/checkout_controller.php');
+            show_order_success();
+            break;
+        
+        // customer purchase history (Task 3)
+        case 'my_orders':
+            require_once('../controllers/order_controller.php');
+            my_orders();
+            break;
         
         // Task 2 routes
         case 'home':
