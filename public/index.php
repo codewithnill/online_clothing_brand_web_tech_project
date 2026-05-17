@@ -120,15 +120,51 @@
             purchase_history();
             break;
         
-        // home fallback
+        // Task 2 routes
         case 'home':
+            require_once('../controllers/home_controller.php');
+            home();
+            break;
+        
+        case 'search_products':
+            require_once('../controllers/search_controller.php');
+            search();
+            break;
+        
+        case 'filter_products':
+            require_once('../controllers/search_controller.php');
+            show_filter();
+            break;
+        
+        case 'product_details':
+            require_once('../controllers/product_detail_controller.php');
+            product_details();
+            break;
+        
+        case 'cart':
+            require_once('../controllers/cart_controller.php');
+            cart_index();
+            break;
+        
+        case 'add_cart':
+            require_once('../controllers/cart_controller.php');
+            add_cart();
+            break;
+        
+        case 'update_cart':
+            require_once('../controllers/cart_controller.php');
+            update_cart();
+            break;
+        
+        case 'remove_cart':
+            require_once('../controllers/cart_controller.php');
+            remove_cart();
+            break;
+        
+        // home fallback
         default:
-            echo "<center>";
-            echo "<marquee>";
-            echo "<h1>Welcome to Online Clothing Brand</h1>";
-            echo "</marquee>";
-            echo "<p><a href='index.php?action=login'>Sign in</a> | <a href='index.php?action=register'>Sign up</a></p>";
-            echo "</center";
+            require_once('../controllers/home_controller.php');
+            home();
             break;
     }
 ?>
