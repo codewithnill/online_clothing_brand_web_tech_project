@@ -31,7 +31,7 @@
                 }
             ?>
             
-            <form method="POST" action="index.php?action=login_submit">
+            <form id="login_form" method="POST" action="index.php?action=login_submit">
                 <label>Email:</label>
                 <input type="email" name="email" required> <br><br>
                 
@@ -48,5 +48,10 @@
             <p>Don't have an account? <a href="index.php?action=register">Sign up now.</a></p>
         </center>
     </div>
+
+    <script src="../public/js/auth.js"></script>
+    <script>
+        document.getElementById('login_form').onsubmit = validateLoginForm;
+    </script>
 </body>
 </html>

@@ -42,7 +42,7 @@
                 }
             ?>
 
-            <form method="POST" action="index.php?action=register_submit">
+            <form id="register_form" method="POST" action="index.php?action=register_submit">
                 <label>Name:</label>
                 <input type="text" name="name" required> <br><br>
 
@@ -70,5 +70,10 @@
             <p>Already have an account? <a href="index.php?action=login">Login here</a></p>  
         </center>
     </div>
+
+    <script src="../public/js/auth.js"></script>
+    <script>
+        document.getElementById('register_form').onsubmit = validateRegisterForm;
+    </script>
 </body>
 </html>

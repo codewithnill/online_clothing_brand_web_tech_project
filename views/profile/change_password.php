@@ -27,7 +27,7 @@
                 }
             ?>
 
-            <form method="POST" action="../public/index.php?action=update_password">
+            <form id="change_password_form" method="POST" action="../public/index.php?action=update_password">
                 <label>Current Password:</label>
                 <input type="password" name="current_password" required> <br><br>
 
@@ -44,5 +44,10 @@
             <a href="index.php?action=profile">Back to Profile</a>
         </center>
     </div>
+
+    <script src="../public/js/auth.js"></script>
+    <script>
+        document.getElementById('change_password_form').onsubmit = validateChangePasswordForm;
+    </script>
 </body>
 </html>

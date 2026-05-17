@@ -29,7 +29,7 @@
                 }
             ?>
 
-            <form method="POST" action="../public/index.php?action=update_profile">
+            <form id="edit_profile_form" method="POST" action="../public/index.php?action=update_profile">
                 <label>Name:</label>
                 <input type="text" name="name" value="<?php echo $user['user_name']; ?>" required> <br><br>
 
@@ -46,5 +46,10 @@
             <a href="index.php?action=profile">Back to Profile</a>
         </center>
     </div>
+
+    <script src="../public/js/auth.js"></script>
+    <script>
+        document.getElementById('edit_profile_form').onsubmit = validateEditProfileForm;
+    </script>
 </body>
 </html>
