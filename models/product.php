@@ -125,4 +125,19 @@
         mysqli_close($con);
         return $result;
     }
+
+    // Returns all products belonging to a specific category (Task-3)
+    function get_products_by_category($category_id) {
+        $con = get_connection();
+        $sql = "SELECT * FROM products WHERE product_category_id = '$category_id' ORDER BY product_created_at DESC";
+        $result = mysqli_query($con, $sql);
+ 
+        $products = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $products[] = $row;
+        }
+ 
+        mysqli_close($con);
+        return $products;
+    }
 ?>

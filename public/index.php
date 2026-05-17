@@ -120,6 +120,12 @@
             purchase_history();
             break;
 
+        // category browsing (Task 3)
+        case 'category':
+            require_once('../controllers/home_controller.php');
+            show_category();
+            break;
+            
          // checkout routes (Task 3)
         case 'checkout_invoice':
             require_once('../controllers/checkout_controller.php');
