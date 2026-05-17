@@ -1,5 +1,6 @@
 <?php
     // session_start();
+    require_once('../utils/auth_helper.php');
 ?>
 
 <!DOCTYPE html>
