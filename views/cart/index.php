@@ -41,6 +41,10 @@
             
             <br>
             <a href="../public/index.php?action=home">Continue shopping</a>
+            &nbsp;&nbsp;
+            <a href="../public/index.php?action=checkout_invoice">
+                <button type="button">Proceed to Checkout</button>
+            </a>
         </center>
     </div>
     
